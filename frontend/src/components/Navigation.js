@@ -11,10 +11,7 @@ import { Link} from "react-router-dom";
 {!token?(<><Link to='/Register'>Register </Link>  <Link to='/Login'>Login </Link></>)
 :(<><Link to='/Dashboard'>Dashboard </Link><Link to='/Newarticle'>Newarticle </Link></>)}
 
-    {/* token ?  ( <Link to='/Login'>Login </Link>
-      <Link to='/Register'>Register </Link>)
-      : (<Link to='/Dashboard'>Dashboard </Link>
-      <Link to='/Newarticle'>Newarticle </Link>)  */}
+   
      </div>
 )
 }

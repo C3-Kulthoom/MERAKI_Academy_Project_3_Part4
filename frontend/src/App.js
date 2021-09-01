@@ -5,7 +5,7 @@ import Navigation from "./components/Navigation";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Dashboard from "./components/Dashboard"
-import Newarticle from "./components/Newarticle"
+import NewArticle from "./components/Newarticle"
 
 
 import { Route} from "react-router-dom";
@@ -27,7 +27,7 @@ export default function App() {
     
           <Route exact path="/Register" component={Register} />
           <Route exact path="/Dashboard" component={Dashboard}/>
-          <Route exact path="/Newarticle" component={Newarticle} />
+          <Route exact path="/Newarticle"  render={() => <NewArticle token = {token}  /> }  />
        
        
       </div>
