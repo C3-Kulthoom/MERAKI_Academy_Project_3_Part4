@@ -111,7 +111,7 @@ export default function Dashboard() {
                   UPDATE{" "}
                 </button>
               </div>
-              <p>{massage}</p>
+              <p  style={{ fontSize: '20px',fontWeight:"bolder" }}  >{massage}</p>
             </div>
           );
         })}
