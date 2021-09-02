@@ -27,7 +27,7 @@ export default function App() {
     
           <Route exact path="/Register" component={Register} />
           <Route exact path="/Dashboard" component={Dashboard}/>
-          <Route exact path="/Newarticle"  render={() => <NewArticle token = {token}  /> }  />
+          <Route exact path="/Newarticle"  render={() => <NewArticle token = {token}/> }  />
        
        
       </div>

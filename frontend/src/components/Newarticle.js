@@ -5,23 +5,25 @@ import axios from "axios"
 
 export const NewArticle=({token})=> {
     let [title, setTitle] = useState("");
-    let [discription, setDiscription] = useState("");
+    let [description, setDiscription] = useState("");
     let [massage, setMassage] = useState("");
     const creatNewArt =()=>
 {
 
         let newArt = {
             title ,
-            discription
+            description
           };
-          axios.post(`http://localhost:5000/NewArticle`,`headers:{
-            'Authorization': Bearer${token}
-            } `, newArt).then((res) => {
-            console.log(res)
-           
-     
+          axios.post(`http://localhost:5000/articles`, newArt ,{headers:{
+            'Authorization':`Bearer ${token}`}}).then((res) => {
+            console.log(res.data)
+            setMassage(("article added succesfully"))
+         }).catch((err)=>
+         {
+             console.log(err);
+            setMassage(("Error happened while creating a new article, please try again"))
          });
-         setMassage(("user added  successfully "))
+         
      }  
         
 
@@ -33,12 +35,12 @@ export const NewArticle=({token})=> {
         </div>
         <div> 
 <input type ="text" placeholder ="article title here"   onChange={(e) => {
-          setTitle((title = e.target.value)) }}/>
+          setTitle((e.target.value)) }}/>
             </div>
             <br/>
             <div> 
 <textarea placeholder="article discription here"  onChange={(e) => {
-          setDiscription((discription = e.target.value)) }}/>
+          setDiscription((e.target.value)) }}/>
         </div>
 
         <button  onClick={creatNewArt} >
