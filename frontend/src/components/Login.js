@@ -37,16 +37,16 @@ const Login = ({token ,setToken }) => {
 
   return (
 
-    <div style={{display:"grid" , gap:"10px" , width:"50%" }}>
+    <div style={{display:"grid" , gap:"15px" , width:"50%"  }}>
         
-      <input
+      <input style ={{border : " 2px , solid , blue " , fontSize: "20px", hight: "30px"}}
         placeholder="email here"
         type="text"
         onChange={(e) => {
           setEmail(e.target.value);
         }}
       />
-      <input
+      <input style ={{border : " 2px , solid , blue " , fontSize: "20px", hight: "30px"}}
         placeholder="Password here  "
         type="password"
         onChange={(e) => {
@@ -55,7 +55,7 @@ const Login = ({token ,setToken }) => {
 
       />
 
-      <button type="submit" onClick={OnClicking}>
+      <button style ={{border : " 2px , solid , blue ", backgroundColor:"yellow" , fontSize: "20px", hight: "30px"}}type="submit" onClick={OnClicking}>
        Login
       </button>
 <div>{massage}</div>

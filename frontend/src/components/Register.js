@@ -36,42 +36,42 @@ const Register = () => {
   return (
     <div style={{display:"grid" , gap:"10px" , width:"50%" }}>
         
-      <input
+      <input style ={{border : " 2px , solid , blue " , fontSize: "20px", hight: "30px"}}
         placeholder="FirstName here"
         type="text"
         onChange={(e) => {
           setFirstName((firstName = e.target.value));
         }}
       />
-      <input
+      <input style ={{border : " 2px , solid , blue " , fontSize: "20px", hight: "30px"}}
         placeholder="LastName here"
         type="text"
         onChange={(e) => {
           setLastName((lastName = e.target.value));
         }}
       />
-      <input
+      <input style ={{border : " 2px , solid , blue " , fontSize: "20px", hight: "30px"}}
         placeholder=" Age here "
         type="number"
         onChange={(e) => {
           setAge((age = e.target.value));
         }}
      />
-      <input
+      <input style ={{border : " 2px , solid , blue " , fontSize: "20px", hight: "30px"}}
         placeholder="Country  here"
         type="text"
         onChange={(e) => {
           setCountry((country = e.target.value));
         }}
       />
-      <input
+      <input style ={{border : " 2px , solid , blue " , fontSize: "20px", hight: "30px"}}
         placeholder="email  here"
         type="text"
         onChange={(e) => {
           setEmail((email = e.target.value));
         }}
       />
-      <input
+      <input style ={{border : " 2px , solid , blue " , fontSize: "20px", hight: "30px"}}
         placeholder="Password here"
         type="password"
         onChange={(e) => {
@@ -80,7 +80,7 @@ const Register = () => {
 
       />
 
-      <button type="submit" onClick={OnClicking}>
+      <button  style ={{border : " 2px , solid , blue ", backgroundColor:"yellow" , fontSize: "20px", hight: "30px"}} type="submit" onClick={OnClicking}>
         Register
       </button>
 
