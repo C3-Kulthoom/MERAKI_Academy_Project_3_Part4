@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+
 import "./App.css";
 import { useState } from "react";
 import Navigation from "./components/Navigation";
@@ -16,12 +16,14 @@ export default function App() {
 
      const [token , setToken] = useState("")
   return (
-    <>
-      <Navigation token ={token} setToken={setToken}></Navigation>
+    <div style={{border:"2px , green , doted"}}>
+      <Navigation  token ={token} setToken={setToken}></Navigation>
       <br />
       <div className="App">
         {" "}
-      
+      <h1>
+        WELCOME TO OUR BLOG
+      </h1>
         
          <Route exact path="/Login"   render={() => <Login token = {token} setToken={setToken} /> } />
     
@@ -31,7 +33,7 @@ export default function App() {
        
        
       </div>
-    </>
+  </div>
   );
 }
 
